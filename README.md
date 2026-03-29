@@ -1,4 +1,4 @@
-# 🗺️ Salamina Custom Map Generator | Γεννήτρια Χαρτών Σαλαμίνας
+# Salamina Custom Map Generator | Γεννήτρια Χαρτών Σαλαμίνας
 
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
 ![Shapely](https://img.shields.io/badge/Shapely-Geometry-green.svg)
@@ -6,7 +6,7 @@
 
 ---
 
-## 📖 Overview | Σχετικά με το Project
+## Overview | Σχετικά με το Project
 
 **[English]**  
 A highly optimized, commercial-ready Python toolset for generating scalable vector graphics (SVG) maps of Salamina island, Greece. It seamlessly merges OpenStreetMap (OSM) base data with custom-defined GeoJSON areas to produce clean, fast-rendering maps ideal for web and print. 
@@ -16,21 +16,21 @@ A highly optimized, commercial-ready Python toolset for generating scalable vect
 
 ---
 
-## ✨ Features | Δυνατότητες
+## Features | Δυνατότητες
 
-* **🚀 High-Performance SVG Output**: Uses advanced geometry simplification (`Shapely.simplify`) and optimized SVG path commands to keep file sizes incredibly small.
-* **📍 Smart Label Placement**: Employs mathematical representative points (rather than simple centroids) to guarantee that location names always render *inside* their respective polygon boundaries, regardless of shape concavity.
-* **🗂️ Data Caching**: Raw coordinates and OpenStreetMap XML/JSON data are cached locally to prevent API rate-limiting and ensure instant map generation.
-* **🎨 Dual-Map Generators**: Produces both a pure custom area map and a hybrid residential nodes map.
+* **High-Performance SVG Output**: Uses advanced geometry simplification (`Shapely.simplify`) and optimized SVG path commands to keep file sizes incredibly small.
+* **Smart Label Placement**: Employs mathematical representative points (rather than simple centroids) to guarantee that location names always render *inside* their respective polygon boundaries, regardless of shape concavity.
+* **Data Caching**: Raw coordinates and OpenStreetMap XML/JSON data are cached locally to prevent API rate-limiting and ensure instant map generation.
+* **Dual-Map Generators**: Produces both a pure custom area map and a hybrid residential nodes map.
 
-* **🚀 Υψηλής Απόδοσης Εξαγωγή SVG**: Χρησιμοποιεί προηγμένη απλοποίηση γεωμετρίας και βελτιστοποιημένες εντολές SVG για να διατηρεί τα μεγέθη των αρχείων απίστευτα μικρά.
-* **📍 Έξυπνη Τοποθέτηση Ετικετών**: Αξιοποιεί μαθηματικά "αντιπροσωπευτικά σημεία" για να εγγυηθεί ότι τα ονόματα των περιοχών εμφανίζονται πάντα *μέσα* στα όρια του πολυγώνου τους.
-* **🗂️ Αποθήκευση Δεδομένων (Caching)**: Τα ακατέργαστα δεδομένα του OpenStreetMap αποθηκεύονται τοπικά για άμεση δημιουργία χαρτών χωρίς καθυστερήσεις από το API.
-* **🎨 Διπλή Γεννήτρια Χαρτών**: Παράγει τόσο έναν χάρτη αποκλειστικά με τις προσαρμοσμένες περιοχές, όσο και έναν υβριδικό χάρτη οικισμών.
+* **Υψηλής Απόδοσης Εξαγωγή SVG**: Χρησιμοποιεί προηγμένη απλοποίηση γεωμετρίας και βελτιστοποιημένες εντολές SVG για να διατηρεί τα μεγέθη των αρχείων απίστευτα μικρά.
+* **Έξυπνη Τοποθέτηση Ετικετών**: Αξιοποιεί μαθηματικά "αντιπροσωπευτικά σημεία" για να εγγυηθεί ότι τα ονόματα των περιοχών εμφανίζονται πάντα *μέσα* στα όρια του πολυγώνου τους.
+* **Αποθήκευση Δεδομένων (Caching)**: Τα ακατέργαστα δεδομένα του OpenStreetMap αποθηκεύονται τοπικά για άμεση δημιουργία χαρτών χωρίς καθυστερήσεις από το API.
+* **Διπλή Γεννήτρια Χαρτών**: Παράγει τόσο έναν χάρτη αποκλειστικά με τις προσαρμοσμένες περιοχές, όσο και έναν υβριδικό χάρτη οικισμών.
 
 ---
 
-## 📂 Project Structure | Δομή Κώδικα
+## Project Structure | Δομή Κώδικα
 
 The codebase follows a strict "Single Source of Truth" philosophy, completely free of clutter.
 (Ο κώδικας ακολουθεί μια αυστηρή δομή χωρίς περιττά αρχεία.)
@@ -50,7 +50,7 @@ salaminaa/
 
 ---
 
-## 🛠️ Installation | Εγκατάσταση
+## Installation | Εγκατάσταση
 
 **[English]**
 1. Ensure you have Python 3.8+ installed.
@@ -70,7 +70,7 @@ salaminaa/
 
 ---
 
-## 🖥️ Usage | Χρήση
+## Usage | Χρήση
 
 **[English]**  
 To generate or update the maps, simply run the generation scripts. They will automatically read from `custom_areas/` and update the SVG files in seconds.
@@ -90,7 +90,7 @@ python generate_residential_map.py
 
 ---
 
-## 🗺️ Adding Custom Areas | Προσθήκη Νέων Περιοχών
+## Adding Custom Areas | Προσθήκη Νέων Περιοχών
 
 **[English]**
 1. Go to a GeoJSON drawing tool (e.g., [geojson.io](https://geojson.io/)).
@@ -108,7 +108,7 @@ python generate_residential_map.py
 
 ---
 
-## 🤝 Maintenance Notes
+## Maintenance Notes
 
 * The geometries are clipped precisely to the island's coastline via `shapely` boolean intersections (`union_poly.intersection(island_boundary)`).
 * Unwanted bounding boxes or bounding rectangles accidentally exported from GeoJSON editors are filtered out programmatically to avoid rendering artifacts.
